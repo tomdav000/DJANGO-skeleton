@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{%block content%}
+<h1>Girl Page</h1>
+
+	<h2>{{girl.name}}</h2> |
+
+	<a href="{% url 'edit' girl.id %}">EDIT</a> |
+
+	<a href="{% url 'delete' girl.id %}">DELETE</a>
+<br/><br/>
+<a href="{% url 'index' %}">INDEX</a> |
+<a href="{% url 'new' %}">NEW</a> |
+{%endblock%}

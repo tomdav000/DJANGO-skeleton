@@ -1,0 +1,11 @@
+{% extends 'base.html' %}{%block content%}
+<h1>Edit Girl Page</h1>
+<form method='POST'>
+	{%csrf_token%}
+	{{form}}
+	<input type='submit' name='submit' value='submit'/>
+</form>
+<br/><br/>
+<a href="{% url 'index' %}">INDEX</a> |
+
+{%endblock%}

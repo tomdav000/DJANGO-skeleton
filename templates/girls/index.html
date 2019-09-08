@@ -1,0 +1,16 @@
+{% extends 'base.html' %}{%block content%}
+<h1>Index Page</h1>
+{%for girl in girls%}
+	<p>{{girl.name}} </p> |
+	<a href="{% url 'girl' girl.id %}">SHOW</a> |
+
+	<a href="{% url 'edit' girl.id %}">EDIT</a> |
+
+	<a href="{% url 'delete' girl.id %}">DELETE</a>
+	
+	<br/>
+{%endfor%}
+<br/><br/>
+<a href="{% url 'index' %}">INDEX</a> |
+<a href="{% url 'new' %}">NEW</a> |
+{%endblock%}
